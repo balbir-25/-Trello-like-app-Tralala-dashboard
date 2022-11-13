@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&display=swap');
+
+body{
+    background-image: url(https://th.bing.com/th/id/R.d382df747085f4475d92a96d074fac49?rik=59tu8wavI9BLnQ&riu=http%3a%2f%2fcon-cepsrainforests.weebly.com%2fuploads%2f1%2f0%2f2%2f0%2f102090710%2frainforest_1_orig.jpg&ehk=vy2uA8OULCyAqKJTcgo34kcFUj1Gc3i56ThhRCppucc%3d&risl=&pid=ImgRaw&r=0);
+    color: rgb(10, 9, 9);
+    overflow-y: hidden;
+    margin-bottom: 0;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em;
+    background-size: cover;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+/* ===============================================Start Navbar Area========================================================= */
+
+#navbar{
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    height: 60px;
+    position: fixed;
+    padding: 8px 20px;
+    background-color: rgba(211, 200, 51, 0.67);
+
+}
+
+
+#navbar > * {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#navbar .menu{
+    cursor: pointer;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 1px;
+    margin-top: 20px;
+    font-size: medium;
+
+}
+
+#navbar .menu > *, #navbar .actions > * {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 2px;
+    margin: 0px 4px;
+    background-color: rgb(9, 241, 191, 0.65);
+}
+
+ #navbar .menu .menu-input{
+    background-color: transparent;
+    padding: 0;
+}
+
+#navbar .menu .menu-input > input{
+    margin:3px;
+    padding: 4px 0.5em;
+    border: none;
+    outline: none;
+    width: 120px;
+    font-size: 1.15em;
+    border-radius: 2px;
+    background-color: rgb(9, 241, 191, 1);
+    line-height: 1.4;
+}
+
+#navbar .menu-input > input:focus{
+    background-color: white;
+}
+
+#navbar .actions{
+   justify-content: flex-end;
+
+}
+
+#navbar .actions .icon {
+   margin: 3px;
+   padding: 2px;
+   cursor: pointer;
+}
+
+#navbar .icon:hover{
+    opacity: 0.4;
+}
+
+#navbar .title{
+    text-align: center;
+    font-size: 1.13em;
+    font-weight: bolder;
+    justify-content: space-around;
+}
+
+/* =======================================================End Navbar Area=====================================================*/
+
+/* =======================================================Start Main Area===================================================== */
+
+.container{
+    display: flex;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+/* =====================================================Start Box-Menu Area==================================================== */
+
+.box-menu{
+    position: fixed;
+    display: flex;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    height:40px;
+    justify-content: space-between;
+    background-color: rgba(0, 128, 128, 0.479);
+    align-items: center;
+}
+
+.box-icon{
+    cursor: pointer;
+}
+
+.box-icon:hover{
+    opacity: 0.4;
+}
+
+/* ====================================================Start Board Area===================================================== */
+
+.board{
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    overflow: auto;
+    margin-top: 20px;
+    padding: 84px 20px 20px;
+}
+
+.task {
+    flex-shrink: 0;
+    flex-basis: 240px;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.list{
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    background-color:  rgba(0, 128, 128, 0.9);
+}
+
+.list-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-title > h3{
+    margin: 4px;
+    font-size: bold;
+}
+
+.list-icon{
+    margin: 0 4px;
+}
+
+.list-icon:hover{
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.list-task{
+    padding: 10px;
+    margin: 10px 0;
+    background-color: white;
+}
+
+.list-task > i{
+    float: right;
+    display: none;
+}
+ 
+.list-task:hover{
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.list-task:hover i{
+    display: inline;
+}
+
+.add-list{
+    cursor: pointer;
+    margin-bottom: 4px 0 8px;
+}
+
+.add-list:hover{
+    opacity: 0.5;
+}
+
+input, textarea{
+    border: none;
+    outline: none;
+}
+
+#t-area{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid teal;
+    font-size: 1em;
+    resize: none;
+}
+
+.task .list, .list input, .list textarea, .list button{
+    border-radius: 4px;
+}
+
+.form-btn{
+    margin: 10px 0;
+}
+
+.btn{
+    margin-right: 8px;
+    cursor: pointer;
+    background-color: gold;
+    border: none;
+    padding: 8px;
+    font-size: 1.2em;
+    text-align: center;
+    width: auto;
+}
+
+.cancel{
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+}
+
+
+/* =======================================================End Main Area===================================================== */
+
+
+
+/*=======================================================Start Media Querry=================================================== */
+
+
+@media only screen and (max-width: 400px){
+    #navbar{
+        padding:0;
+    }
+
+    #navbar .menu .menu-input > input{
+        width: 20px;
+    }
+    #navbar .title{
+        display: none;
+    }
+    .box-menu{
+        padding: 0;
+    }
+}
